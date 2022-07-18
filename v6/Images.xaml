@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="v6.Images">
+    <ContentPage.Content>
+        <StackLayout >
+            <Grid HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                
+            <BoxView>
+                <BoxView.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#23D5AB" Offset="0.1"/>
+                        <GradientStop Color="#008E89" Offset="0.5"/>
+                        <GradientStop Color="#085E7D" Offset="0.5"/>
+                            <GradientStop Color="#084594" Offset="0.5"/>
+                        </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+
+
+                <Frame  BorderColor="White" BackgroundColor="Transparent" HasShadow="True" CornerRadius="28" Margin="10,10,10,0"   VerticalOptions="Start" HorizontalOptions="Fill">
+                    <Label Text="Knock Knock Live" HorizontalOptions="Center" FontSize="23" FontAttributes="Bold" TextColor="Black"  ></Label>
+            </Frame>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                <Frame HorizontalOptions="Center" BorderColor="White" BackgroundColor="Transparent" HasShadow="True" CornerRadius="5" Margin="7,7,7,0" HeightRequest="240" WidthRequest="360" >
+                    <Image x:Name="photo" Source="{DynamicResource foto}" Margin="-25,-15,-25,-15" WidthRequest="240" HeightRequest="360"></Image>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,30">
+                <Frame BackgroundColor="Transparent">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="350" Margin="-20,0,0,0">
+                        <Button BorderColor="White" BorderWidth="1.1" BackgroundColor="Transparent" Text="Take Photo"  Clicked="Button_Clicked"  Margin="10,0,10,0" WidthRequest="70" CornerRadius="10"/>
+                        <Button BorderColor="GreenYellow" BorderWidth="1.1" BackgroundColor="Transparent" Text="Start Live" Clicked="Button_Clicked_1"   Margin="10,0,10,0" WidthRequest="70" CornerRadius="10"/>
+                        <Button BorderColor="IndianRed" BorderWidth="1.1" BackgroundColor="Transparent" Text="Stop Live" Clicked="Button_Clicked_2"   Margin="10,0,10,0" WidthRequest="70" CornerRadius="10"/>
+                        <Button BorderColor="Black" BorderWidth="1.1" BackgroundColor="Transparent" Text="Relay" Clicked="Button_Clicked_3"   Margin="10,0,10,0" WidthRequest="70" CornerRadius="10"/>
+                        </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

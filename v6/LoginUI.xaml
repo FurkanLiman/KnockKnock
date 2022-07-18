@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="v6.LoginUI">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <BoxView>
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#085E7D" Offset="0.1"/>
+                            <GradientStop Color="#008E89" Offset="0.3"/>
+                            <GradientStop Color="#23D5AB" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Frame  Padding="0,0,0,0" Margin="0,0,0,0"  BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="Center" >
+                    <Image Source="knock_logo.png" WidthRequest="400" HeightRequest="170" Margin="40,10,40,10" />
+                </Frame>
+                
+                
+                
+                <StackLayout Padding="0" Margin="15,175,15,50" HorizontalOptions="FillAndExpand" >
+                    <Frame BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="12">
+                        <StackLayout>
+
+                            
+                            
+                            <StackLayout>
+                                <Frame >
+                                    <Label Text="SIGN IN" TextColor="Black" FontSize="Title" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" />
+                                </Frame>
+                                <Frame BorderColor="Black" CornerRadius="15" Padding="8,8,8,0" Margin="7,7,7,3">
+                                    <Entry x:Name="txtUsername" Placeholder="Username"  TextColor="Black" PlaceholderColor="Gray" ></Entry>
+                                </Frame>
+                                <Frame BorderColor="Black" CornerRadius="15" Padding="8,8,8,0" Margin="7,7,7,3">
+                                    <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                                </Frame>
+                                <Button 
+                                    VerticalOptions="Center"
+                                    Text="SIGN IN"
+                                    TextColor="Black"
+                                    BackgroundColor="#D4F1F4"
+                                    BorderColor="#189AB4"
+                                    BorderWidth="2.5"
+                                    CornerRadius="50"
+                                    Clicked="Button_Clicked"
+                                    Margin="30,10,30,10"
+                                ></Button>
+
+                                <Label HorizontalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Don't have an account?"  TextColor="Gray"/>
+                                            <Span Text="Register"  TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
